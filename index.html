@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        
+    
+
+    <style>
+        body{
+            background-color:green;
+        }
+         .calc-button-row{
+             display: flex;
+             margin: 5px;
+             padding: 7px;
+            
+         }
+         .button{
+             margin: 5px;
+             padding: 7px;
+
+
+         }
+          .col-md-6{
+              border: solid 2px red;
+          }
+          .key-pad
+          {
+            border: solid 3px rgb(0, 0, 0);
+
+          }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="display-pin" class="form-control" type="text">
+                    <button onclick="generatePin()" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="typed-numbers" class="form-control" type="text">
+                    <div class="numbers"><button>numbers</button>
+                        <div id="key-pad" class="calc-body">
+                            <div class="calc-button-row">
+                                <div class="button"><button>7</button></div>
+                                <div class="button"><button>8</button></div>
+                                <div class="button"><button>9</button></div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button"><button>4</button></div>
+                                <div class="button"><button>5</button></div>
+                                <div class="button"><button>6</button></div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button"><button>1</button></div>
+                                <div class="button"><button>2</button></div>
+                                <div class="button"><button>3</button></div>
+                            </div>
+                            <div class="calc-button-row">
+                                
+                                <div class="button"><button>0</button></div>
+                                <div class="button"><button>C</button></div>
+                            </div>
+                            <div>
+                                <button onclick="verifyPin()" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 tring to left</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notify-section">
+                <p id="notify-fail" class="notify" style="color: maroon; font-size: xx-large;">❌ Pin will not Match Please try again</p>
+                <p id="notify-success" class="notify" style="color: rgb(243, 22, 70); font-size: xx-large;">✅ Pin Matched  it wii be opening for you</p>
+            </div>
+        </div>
+        <script src="mabu.js"></script>
+</body>
+
+</html>
